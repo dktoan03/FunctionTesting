@@ -10,6 +10,10 @@ with open("ControlFlowTesting.txt", "r") as file_object:
     file_content = file_object.read()
 pairs_ControlFlowTesting = eval(file_content)
 
+with open("DataFlowTesting.txt", "r") as file_object:
+    file_content = file_object.read()
+pairs_DataFlowTesting = eval(file_content)
+
 def Test(PAIR):
     for IMDB, HOURSTART in PAIR:
         if (IMDB < 0) or (IMDB > 10) or (HOURSTART < 0) or (HOURSTART > 24):
@@ -24,3 +28,4 @@ def Test(PAIR):
 Test(pairs_BoundaryValueAnalysis)
 Test(pairs_DecisionTableTesting)
 Test(pairs_ControlFlowTesting)
+Test(pairs_DataFlowTesting)
