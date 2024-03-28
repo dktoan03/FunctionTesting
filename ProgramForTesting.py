@@ -18,7 +18,7 @@ def Test(PAIR):
     for IMDB, HOURSTART in PAIR:
         if (IMDB < 0) or (IMDB > 10) or (HOURSTART < 0) or (HOURSTART > 24):
             print(f"IMDB = {IMDB}, HOURSTART = {HOURSTART}", "output = ", -1)
-        elif (IMDB < 6) or (IMDB < 8.5 and (HOURSTART < 12 or (HOURSTART > 16 and HOURSTART < 20))):
+        elif (!ISFAVORITE) or (IMDB < 6) or (IMDB < 8.5 and (HOURSTART < 12 or (HOURSTART > 16 and HOURSTART < 20))):
             print(f"IMDB = {IMDB}, HOURSTART = {HOURSTART}", "output = ", 0)
         elif ((IMDB < 8.5) and (HOURSTART >= 12 and HOURSTART <= 16)) or (IMDB > 8.5 and (HOURSTART < 12 or (HOURSTART > 16 and HOURSTART < 20))):
             print(f"IMDB = {IMDB}, HOURSTART = {HOURSTART}", "output = ", 1)
