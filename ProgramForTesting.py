@@ -15,7 +15,7 @@ with open("DataFlowTesting.txt", "r") as file_object:
 pairs_DataFlowTesting = eval(file_content)
 
 def Test(PAIR):
-    for IMDB, HOURSTART in PAIR:
+    for IMDB, HOURSTART, ISFAVORITE in PAIR:
         if (IMDB < 0) or (IMDB > 10) or (HOURSTART < 0) or (HOURSTART > 24):
             print(f"IMDB = {IMDB}, HOURSTART = {HOURSTART}", "output = ", -1)
         elif (!ISFAVORITE) or (IMDB < 6) or (IMDB < 8.5 and (HOURSTART < 12 or (HOURSTART > 16 and HOURSTART < 20))):
