@@ -13,8 +13,6 @@ def main(filename):
     try:
         with open(filename, 'r') as file:
             for line in file:
-                # Chuyển đổi dòng thành tuple và chạy hàm Test
-                # Đây là cách đơn giản, nhưng cẩn thận với dữ liệu đầu vào không tin cậy
                 pair = eval(line.strip())
                 Test(pair)
     except FileNotFoundError:
